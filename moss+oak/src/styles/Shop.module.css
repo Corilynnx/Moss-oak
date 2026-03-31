@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    outline: orchid;
+}
+
+.shop-header {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: var(--font-display);
+}

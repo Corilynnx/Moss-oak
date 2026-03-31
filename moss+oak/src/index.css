@@ -1,0 +1,94 @@
+:root {
+  /* Base palette */
+  --bg: #f7f8c8;
+  --bg-secondary: #E8EAB0;
+  --bg-card: #F7F8DC;
+  --bg-overlay: rgba(240, 242, 189, 0.85);
+
+  --text: #4B352A;
+  --text-h: #2B1E16;
+  --text-muted: #7A6255;
+  --text-light: #A89080;
+  --text-on-accent: #FAF5EE;
+
+  --border: #C9BFAE;
+  --border-light: #DDD8CC;
+  --border-focus: #CA7842;
+
+  --secondary: #B2CD9C;
+  --secondary-hover: #9BBE85;
+  --secondary-muted: #D4E4C4;
+
+  --accent: #CA7842;
+  --accent-hover: #B5622E;
+  --accent-muted: #E8C4A0;
+  --accent-subtle: rgba(202, 120, 66, 0.12);
+
+  /* Buttons */
+  --btn-primary-bg: #CA7842;
+  --btn-primary-bg-hover: #B5622E;
+  --btn-primary-text: #FAF5EE;
+  --btn-secondary-bg: #B2CD9C;
+  --btn-secondary-bg-hover: #9BBE85;
+  --btn-secondary-text: #2B1E16;
+  --btn-ghost-text: #4B352A;
+  --btn-ghost-bg-hover: rgba(202, 120, 66, 0.1);
+  --btn-radius: 8px;
+  --btn-radius-pill: 999px;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.75rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.5rem;
+  --text-7xl: 7.25rem;
+
+  --leading-tight: 1.2;
+  --leading-body: 1.65;
+  --tracking-wide: 0.06em;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(43, 30, 22, 0.08);
+  --shadow-md: 0 4px 12px rgba(43, 30, 22, 0.10);
+  --shadow-lg: 0 8px 28px rgba(43, 30, 22, 0.13);
+  --shadow-xl: 0 16px 48px rgba(43, 30, 22, 0.16);
+  --shadow-accent: 0 4px 16px rgba(202, 120, 66, 0.25);
+  --shadow-inset: inset 0 2px 6px rgba(43, 30, 22, 0.08);
+
+  /* Filters (for images — sustainable/warm look) */
+  --filter-warm: brightness(1.02) saturate(0.95) sepia(0.08);
+  --filter-muted: brightness(0.97) saturate(0.85) sepia(0.12);
+  --filter-hover: brightness(1.05) saturate(1.05);
+  --filter-overlay: brightness(0.88) saturate(0.9);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* Layout */
+  --max-width: 1280px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}

@@ -1,0 +1,47 @@
+
+
+.navbar {
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 75%;
+    height: 50px;
+    left: 10%;
+    top: 5%;
+    border-radius: var(--btn-radius-pill);
+    background-color: var(--bg-card);
+    color: var(--text);
+    box-shadow: var(--shadow-md);
+
+}
+
+.navbar .logo {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+    
+}
+
+.navLinks li a {
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color: var(--text);
+    font-size: var(--text-base);
+}
+
+
+
+.navLinks {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0 3.75rem;
+    margin: 0;
+}
