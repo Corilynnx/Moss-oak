@@ -1,5 +1,7 @@
-import { createContext, useState, type JSX, type ReactNode } from 'react';
+import { createContext, useContext, useState, type JSX, type ReactNode } from 'react';
+
 import type { CartContextType, CartItem, Product } from '../Types/index';
+
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
@@ -53,4 +55,13 @@ export function CartProvider({ children }: { children: ReactNode }): JSX.Element
     </CartContext.Provider>
   );
 }
+// eslint-disable-next-line react-refresh/only-export-components
+export function useCart(): CartContextType {
+  const context = useContext(CartContext);
+  if (context === undefined) {
+    throw new Error('useCart must be used within a CartProvider');
+  }
+  return context;
+}
+
 

@@ -92,19 +92,17 @@ export function Home() {
         and long-lasting construction. Every piece we build starts with reclaimed
         or responsibly harvested wood, keeping waste out of landfills and giving
         raw materials a second life.
-      </p>
-      <p className={styles['sustainability-text']}>
-        Our craftsmen follow eco-conscious processes from start to finish — using
+
+         Our craftsmen follow eco-conscious processes from start to finish — using
         low-VOC finishes, minimizing off-cuts, and packaging orders with recycled
         materials. When you invest in one of our pieces, you're choosing furniture
         built to last generations, not seasons.
-      </p>
-      <p className={styles['sustainability-text']}>
-  When you invest in one of our pieces, you're not just furnishing a space —
+        <br></br>
+          When you invest in one of our pieces, you're not just furnishing a space —
   you're choosing furniture built to last generations, not seasons. Every joint
   is hand-fitted, every surface hand-finished, because we believe the most
   sustainable product is one you never need to replace.
-</p>
+      </p>
     </div>
   </div>
 

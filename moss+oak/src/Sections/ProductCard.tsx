@@ -1,6 +1,7 @@
 import styles from '../styles/ProductCard.module.css';
 import { useCart } from '../Context/cartContext';
 import type { Product } from '../Types';
+import { useState } from 'react';
 
 interface ProductCardProps {
     product: Product;
@@ -8,6 +9,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     const { addToCart } = useCart();
+    const [expanded, setExpanded] = useState(false);
 return (
     <div className={styles['product-card']}>
 
@@ -27,7 +29,22 @@ return (
 
       <div className={styles['product-card-body']}>
         <h3 className={styles['product-card-name']}>{product.name}</h3>
-        <p className={styles['product-card-desc']}>{product.description}</p>
+        <p className={styles['product-card-desc']}>
+          {expanded || product.description.length <= 200
+      ? product.description
+      : `${product.description.slice(0, 200)}...`}
+    {product.description.length > 200 && (
+      <a
+        className={styles['read-more-btn']}
+        onClick={() => setExpanded(!expanded)}
+      >
+        {expanded ? 'Read less' : ' Read more'}
+      </a>
+    )}
+        </p>
+
+          
+
 
         <div className={styles['product-card-footer']}>
           <span className={styles['product-card-price']}>

@@ -1,0 +1,121 @@
+
+
+.product-card {
+  max-width: 450px;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;               /* bumped up slightly */
+  padding: 15px;                     /* tighter than 16px */
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+
+
+  } 
+  .product-card:hover {
+  border-color: var(--border-hover); 
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.product-card-img-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;               
+  flex-shrink: 0;
+}
+
+.product-card-img {
+  object-fit: cover;
+  width: 100%;
+  display: block;                 
+  aspect-ratio: 4 / 3;             
+  
+}
+
+
+.product-card-body {
+  /* middle section stretches to fill remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;                  /* replaces justify-content: center */
+  margin: 0.75rem 0 0; 
+}
+
+.product-card-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.8rem;  
+ 
+}
+
+.product-card-desc {
+  flex: 1;                  /* this pushes the footer down */
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.product-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;         /* pins footer to bottom regardless of desc height */
+  padding-top: 1rem;
+}
+
+.read-more-btn {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  margin-left: 0.55rem;
+  cursor: pointer;
+}
+.read-more-btn:hover {
+  text-decoration: underline;
+  color: var(--text-hover);
+
+}
+
+.product-card-price {
+  font-family: var(--font-base);
+  font-size: 1.1rem;
+  font-weight: 575;
+  color: var(--btn-primary-bg-hover);
+}
+
+.product-badge--best {
+  background-color: var(--accent-muted);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--btn-radius-pill);
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.product-card-btn {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card-btn:hover {
+  background-color: var(--btn-primary-bg-hover);
+}

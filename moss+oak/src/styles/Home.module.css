@@ -27,7 +27,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 140%;
+    height: 117%;
     background: var(--bg-overlay);
     opacity: 0.32;
     display: block;
@@ -86,11 +86,10 @@ body {
 
 .cta-btn-1 {
     padding: .5rem 1rem;
-    
     border-radius: var(--btn-radius-pill);
     border: none;
     background: var(--btn-primary-bg);
-    color: var(--text);
+    color: var(--text-on-accent);
     font-family: var(--font-body);
     font-weight: 500;
     cursor: pointer;
@@ -128,7 +127,7 @@ body {
 .brand-story-title  {
     font-family: var(--font-display);
     font-size: var(--text-4xl);
-    color: var(--btn-primary-bg);
+    color: var(--btn-primary-bg-hover);
     margin: 0;
     margin-bottom: var(--space-md);
 }
@@ -171,10 +170,10 @@ body {
     justify-content: center;
     padding: var(--space-xl);
     width: 100%;
-    height: 98vh;
+    height: 100vh;
     background-color: var(--accent);
     color: var(--text-on-accent);
-    padding-bottom: 5rem;
+
 
 }
 
@@ -188,7 +187,7 @@ body {
 /* This is where the grid layout lives */
 .best-sellers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: var(--space-lg);
     width: 100%;
     max-width: 1200px;
@@ -201,7 +200,8 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
     overflow: hidden;
-    min-height: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .best-sellers-title {
@@ -213,7 +213,6 @@ body {
 
 .product-image {
     width: 100%;
-    height: auto;
     object-fit: cover;
     border-radius: var(--btn-radius);
     margin-bottom: var(--space-md);
@@ -226,10 +225,19 @@ body {
 }
 
 .product-description a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-    margin: 0 0.25rem;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.product-description.collapsed {
+  max-height: 4.5rem;      /* roughly 3 lines */
+}
+
+.product-description.expanded {
+  max-height: 600px;       /* large enough to never clip */
 }
 
 .read-more {
@@ -239,6 +247,7 @@ body {
     color: var(--accent);
     font-weight: 500;
     cursor: pointer;
+   
 }
 
 /* Sustainability Section */
@@ -268,7 +277,8 @@ body {
   padding-top: 1.5rem;
   color: var(--text-on-accent);
   letter-spacing: var(--tracking-wide);
-    margin-left: 9rem;
+  margin-left: 9rem;
+  margin-bottom: -20px;
 }
 
 .sustainability-title {
