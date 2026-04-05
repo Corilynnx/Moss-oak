@@ -72,7 +72,7 @@ export const products = [
  image: KayraBed,
  category: 'beds',
  description: 'Meet Kayra, our arched bed that combines elegant design with sustainable craftsmanship. Made from responsibly sourced wood, Kayra features a graceful arch that adds a touch of sophistication to any bedroom. Its sturdy construction ensures durability, while its eco-friendly materials make it a conscious choice for those who value sustainability and quality.',
- isBestSeller: false,
+ isBestSeller: true,
  },
  {
  id: 6,
@@ -153,7 +153,7 @@ export const products = [
   image: BaarloDesk,
   category: 'tables',
   description: 'Meet Baarlo, our stylish and functional desk that combines modern design with sustainable craftsmanship. Made from responsibly sourced wood, Baarlo features a sleek and versatile design that fits perfectly in any office or study. Its durable construction ensures long-lasting use, while its eco-friendly materials make it a conscious choice for those who value sustainability and quality.',
-  isBestSeller: false,
+  isBestSeller: true,
  },
  {
   id: 15,
@@ -189,7 +189,7 @@ export const products = [
   image: CigarSofa,
   category: 'seating',
   description: 'Meet the Cigar Leather Sofa, a luxurious and sustainable addition to your living room. Crafted from responsibly sourced materials, this sofa features a sleek design with plush leather upholstery that adds a touch of sophistication to any space. Its sturdy construction ensures durability, while its eco-friendly materials make it a conscious choice for those who value sustainability and quality.',
-  isBestSeller: false,
+  isBestSeller: true,
  },
  {
   id: 19,
@@ -225,7 +225,7 @@ export const products = [
   image: FaydraAsh,
   category: 'storage',
   description: 'Meet Faydra, our ash oak dresser that combines functionality with sustainable craftsmanship. Made from responsibly sourced wood, Faydra features a sleek design with multiple drawers, perfect for organizing your belongings. Its sturdy construction ensures durability, while its eco-friendly materials make it a conscious choice for those who value sustainability and quality.',
-  isBestSeller: false,
+  isBestSeller: true,
  },
  {
   id: 23,

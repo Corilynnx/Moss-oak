@@ -14,6 +14,7 @@ body {
 .hero-content {
     display: flex;
     box-sizing: border-box;
+    position: relative;
 }
 
 .hero-img {
@@ -27,7 +28,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 117%;
+    height: 100%;
     background: var(--bg-overlay);
     opacity: 0.32;
     display: block;
@@ -45,7 +46,7 @@ body {
     text-shadow: var(--shadow-accent);
     z-index: 2;
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 8%;
   
 }
@@ -95,10 +96,18 @@ body {
     cursor: pointer;
     box-shadow: var(--shadow-sm);
     transition: background-color .35s ease-in-out;
+    
 }
+
+.cta-btn-1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .cta-btn-1:hover {
     background-color: var(--bg-card);
+    color: var(--text);
     transition: background-color .35s ease-in-out;
 }
 
@@ -170,10 +179,10 @@ body {
     justify-content: center;
     padding: var(--space-xl);
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: var(--accent);
     color: var(--text-on-accent);
-
+    padding-bottom: 6rem;
 
 }
 
@@ -199,6 +208,7 @@ body {
     padding-top: 3rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-bottom: 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -263,7 +273,7 @@ body {
 
 .sustainability-content {
   width: 100%;
-  max-width: 960px;
+  max-width: 980px;
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
@@ -312,6 +322,9 @@ body {
   justify-content: center;
   gap: 1.5rem;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sustainability-text {
@@ -326,7 +339,7 @@ body {
 /* Image breaks out of the left edge of the accent block */
 .sustainability-image-wrap {
   position: absolute;
-  left: 33%;
+  left: 23%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
@@ -339,105 +352,265 @@ body {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
   filter: var(--filter-warm);
-  display: block;
+
 }
 
-/* Footer */
 
 
-.footer {
-    background-color: var(--bg-secondary);
-    color: var(--text-muted);
-    text-align: center;
-    padding-top: 6rem;
-    padding-bottom: 3.75rem;
-    font-size: var(--text-sm);
+
+/* ============================================
+   Home.mobile.css
+   Import this at the bottom of Home.module.css
+   or as a separate import in Home.tsx
+   ============================================ */
+
+/* ── Tablet (max 1024px) ───────────────────── */
+@media (max-width: 1024px) {
+
+    .navbar {
+        width: 90%;
+        left: 5%;
+    }
+
+    .hero-title {
+        font-size: var(--text-5xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-lg);
+        width: 65%;
+    }
+
+    .brand-story-img-container {
+        gap: var(--space-xl);
+    }
+
+    .brand-story-img-container img {
+        height: 260px;
+    }
+
+    .sustainability-left {
+        width: 75%;
+    }
+
+    .sustainability-text {
+        margin-left: 4rem;
+        width: 90%;
+    }
+
+    .sustainability-image-wrap {
+        left: 25%;
+    }
+
+    .sustainability-image {
+        width: 320px;
+        height: 380px;
+    }
+
+    .best-sellers-container {
+        height: auto;
+        padding: var(--space-xl) var(--space-lg);
+    }
 }
 
-.footer-column {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-    gap: var(--space-md);
-    max-width: 960px;
-    padding-top: 6rem;
-    margin-bottom: var(--space-lg);
+/* ── Mobile (max 768px) ────────────────────── */
+@media (max-width: 768px) {
+
+    /* Hero */
+    .hero-content {
+        position: relative;
+    }
+
+    .hero-img {
+        height: 85vh;
+        object-fit: cover;
+    }
+
+    .hero-text {
+        top: 28%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .hero-title {
+        font-size: var(--text-4xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-base);
+        width: 90%;
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-top: 1rem;
+    }
+
+    .hero-btn {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-top: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    /* Brand Story */
+    .brand-story {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        padding: var(--space-md);
+    }
+
+    .brand-story-title {
+        font-size: var(--text-2xl);
+    }
+
+    .brand-story-subtitle {
+        font-size: var(--text-base);
+    }
+
+    .brand-story-img-container {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-lg);
+        margin-top: 2rem;
+    }
+
+    .brand-story-img-container img {
+        width: 100%;
+        height: 240px;
+        border-radius: var(--btn-radius);
+    }
+
+    /* Best Sellers */
+    .best-sellers-container {
+        height: auto;
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .best-sellers-title {
+        font-size: var(--text-2xl);
+    }
+
+    .best-sellers-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .product-card {
+        padding: 1.5rem;
+    }
+
+    /* Sustainability */
+    .sustainability-section {
+        padding-bottom: 4rem;
+    }
+
+    .sustainability-title {
+        font-size: var(--text-2xl);
+        padding: 0 1rem;
+    }
+
+    .sustainability-row {
+        flex-direction: column;
+        min-height: unset;
+        align-items: center;
+    }
+
+    .sustainability-image-wrap {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: -3rem;
+    }
+
+    .sustainability-image {
+        width: 85%;
+        height: 280px;
+    }
+
+    .sustainability-left {
+        position: relative;
+        right: auto;
+        width: 100%;
+        border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        padding: 4rem 1.5rem 2.5rem;
+        margin-top: 0;
+    }
+
+    .sustainability-header {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .sustainability-text {
+        margin-left: 0;
+        width: 100%;
+        font-size: var(--text-base);
+    }
+
+    /* Footer */
+    .footer {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    .footer-column {
+        padding-top: 1rem;
+    }
+
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .newsletter-form input {
+        max-width: 100%;
+        width: 80%;
+        margin-top: 1rem;
+    }
+
+    .newsletter-form button {
+        margin-left: 0;
+    }
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: var(--space-lg);
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* ── Small Mobile (max 480px) ──────────────── */
+@media (max-width: 480px) {
 
-.newsletter-form input {
-    padding: var(--space-sm);
-    border-radius: var(--btn-radius-pill);
-    border: 1px solid var(--text-muted);
-    background-color: var(--bg-card);
-    width: 100%;
-    max-width: 300px;
-    margin-top: 1.75rem;
-    font-family: var(--font-body);
-}
+    .hero-title {
+        font-size: var(--text-3xl);
+    }
 
-.newsletter-input:focus {
-    outline: none;                        
-    border: 1px solid var(--accent); 
-}
+    .hero-text {
+        top: 22%;
+    }
 
-.newsletter-form button {
-    padding: var(--space-sm) var(--space-md);
-    border-radius: var(--btn-radius-pill);
-    border: none;
-    background-color: var(--btn-primary-bg);
-    color: var(--text-on-accent);
-    font-family: var(--font-body);
-    font-weight: 500;
-    cursor: pointer;
-    margin-left: var(--space-sm);
-}
+    .brand-story-img-container img {
+        height: 200px;
+    }
 
-.newsletter-btn:hover {
-    background-color: var(--btn-primary-bg-hover);
-    transition: background-color 0.3s ease;
-}
+    .sustainability-image {
+        width: 90%;
+        height: 220px;
+    }
 
-.footer-title {
-    font-family: var(--font-display);
-    font-size: var(--text-3xl);
-    color: var(--accent);
-    margin: 0;
-}
-
-.footer-subtitle {
-    font-size: var(--text-lg);
-    font-family: var(--font-body);
-    color: var(--text-muted);
-}
-
-.footer-heading {
-    font-family: var(--font-display);
-    font-size: var(--text-lg);
-    color: var(--accent);
-    margin: 0;
-}
-
-.footer-list  {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-list li {
-    margin-bottom: var(--space-sm);
-}
-
-.footer-list a {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    .cta-btn-1 {
+        width: 100%;
+        text-align: center;
+    }
 }

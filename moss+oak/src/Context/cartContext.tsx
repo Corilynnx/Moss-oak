@@ -7,6 +7,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: ReactNode }): JSX.Element {
   const [items, setItems] = useState<CartItem[]>([]);
+  const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
 
   const addToCart = (product: Product) => {
     setItems(prev => {
@@ -42,6 +43,7 @@ export function CartProvider({ children }: { children: ReactNode }): JSX.Element
 
   const value: CartContextType = {
     items,
+    totalItems,
     addToCart,
     removeFromCart,
     updateQuantity,

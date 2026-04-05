@@ -22,5 +22,6 @@ export interface CartContextType {
     removeFromCart: (productId: number) => void;            // ✅ number
     clearCart: () => void;
     getTotalPrice: () => number;
+    totalItems: number; // ✅ added totalItems to context
 }
 

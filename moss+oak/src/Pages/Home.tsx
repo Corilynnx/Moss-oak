@@ -6,6 +6,8 @@ import Loungechair from '../assets/images/seating/lounge-chair.jpg';
 import KayraBed from '../assets/images/beds/kayra-bed.jpg';
 import Santo from '../assets/images/seating/santo-outside-chair.jpg'
 import { bestSellers } from '../Data/products';
+import { Link } from 'react-router';
+import Footer from '../Components/Layout/Footer';
 
 
 export function Home() {
@@ -23,8 +25,8 @@ export function Home() {
           <h1 className={styles['hero-title']}>Bring Nature Home.</h1>
           <p className={styles['hero-subtitle']}>Thoughtfully crafted furniture inspired by natural textures and sustainable materials.</p>
           <div className={styles['hero-btn']}>
-            <button className={styles['cta-btn-1']}>Shop Products</button>
-            <button className={styles['cta-btn-1']}>Explore Bestsellers</button>
+            <button className={styles['cta-btn-1']}><Link to="/shop">Shop Products</Link></button>
+            <button className={styles['cta-btn-1']}><Link to="/shop?filter=bestsellers">Explore Bestsellers</Link></button>
           </div>
         </div>
       </div>
@@ -53,7 +55,7 @@ export function Home() {
           <p className={styles['best-sellers-subtitle']}>Discover our most popular pieces, loved by customers for their timeless design and sustainable craftsmanship.</p>
         </div>
         <div className={styles['best-sellers-grid']}>
-        {bestSellers.map(product => (
+        {bestSellers.slice(0, 3).map(product => (
           <div key={product.id} className={styles['product-card']}>
             <img src={product.image} alt={product.name} className={styles['product-image']} />
             <p className={styles['product-description']}>
@@ -106,49 +108,9 @@ export function Home() {
     </div>
   </div>
 
-</section>
-      <section className={styles['footer']}>
-  <div className={styles['footer-content']}>
-    <h2 className={styles['footer-title']}>Join the Moss + Oak Community</h2>
-    <p className={styles['footer-subtitle']}>Sign up for our newsletter to receive exclusive offers, design inspiration, and updates on new collections.</p>
-    <div className={styles['newsletter-form']}>
-      <input type="email" placeholder="Enter your email" className={styles['newsletter-input']} />
-      <button className={styles['newsletter-btn']}>Subscribe</button>
-    </div>
-  </div>
-
-  <div className={styles['footer-grid']}>
-    <div className={styles['footer-column']}>
-      <h3 className={styles['footer-heading']}>About</h3>
-      <ul className={styles['footer-list']}>
-        <li><a href="#ourstory">Our Story</a></li>
-        <li><a href="#sustainability">Sustainability</a></li>
-        <li><a href="#craftmanship">Craftmanship</a></li>
-      </ul>
-    </div>
-
-    <div className={styles['footer-column']}>
-      <h3 className={styles['footer-heading']}>Support</h3>
-      <ul className={styles['footer-list']}>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#shipping">Shipping & Returns</a></li>
-      </ul>
-    </div>
-
-    <div className={styles['footer-column']}>
-      <h3 className={styles['footer-heading']}>Follow Us</h3>
-      <ul className={styles['footer-list']}>
-        <li><a href="#instagram">Instagram</a></li>
-        <li><a href="#facebook">Facebook</a></li>
-        <li><a href="#twitter">Twitter</a></li>
-      </ul>
-    </div>
-  </div>  {/* ← footer-grid closes here, after all 3 columns */}
-
-</section>
           
-      
+      </section>
+      <Footer />
     </main>
     
       </>

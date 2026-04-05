@@ -1,0 +1,132 @@
+/* === CART PREVIEW DROPDOWN === */
+.cart-preview {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  width: 340px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 16px;
+  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* smooth appearance */
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s ease;
+}
+
+/* === ITEMS CONTAINER === */
+.cart-preview-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+/* Slightly tighter item layout for preview */
+.cart-preview .cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Smaller image for preview */
+.cart-preview .cart-item-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Adjust text spacing */
+.cart-preview .cart-item-info {
+  flex: 1;
+}
+
+.cart-preview .cart-item-name {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.cart-preview .cart-item-price {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Remove button tweak */
+.cart-preview .cart-remove-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+.cart-preview .cart-remove-btn:hover {
+  color: #000;
+}
+
+/* === DIVIDER === */
+.cart-summary-divider {
+  margin: 12px 0;
+  height: 1px;
+  background: #eee;
+}
+
+/* === FOOTER === */
+.cart-preview-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Total row reuse */
+.cart-summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+/* === ACTION BUTTONS === */
+.cart-preview-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.cart-preview-actions button {
+  flex: 1;
+  padding: 0.45rem;
+  width:70px;
+  font-size: 0.85rem;
+  border-radius: var(--btn-radius);
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cart-preview-actions button:hover {
+  background-color: var(--btn-primary-bg-hover);
+}
+
+/* === EMPTY STATE (reuse + slight tweak) */
+.cart-preview .cart-empty {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.cart-preview .cart-empty-icon {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cart-preview .cart-empty-text {
+  font-size: 0.9rem;
+  color: #777;
+}
