@@ -1,6 +1,7 @@
 import styles from '../styles/Cart.module.css';
 import { useCart } from '../Context/cartContext';
 import Footer from '../Components/Layout/Footer';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const { items, removeFromCart, updateQuantity, clearCart, getTotalPrice } = useCart();
@@ -107,7 +108,9 @@ const Cart = () => {
                     </div>
 
                     <button className={styles['cart-checkout-btn']}>
-                        Proceed to Checkout
+                        <Link to="/checkout" className={styles['cart-checkout-link']}>
+                            Proceed to Checkout
+                        </Link>
                     </button>
 
                     <button

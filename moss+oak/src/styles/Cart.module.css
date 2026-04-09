@@ -303,3 +303,8 @@
     border-color: #c0392b;
     color: #c0392b;
 }
+
+.cart-checkout-link {
+    color: #fff;
+    text-decoration: none;
+}
