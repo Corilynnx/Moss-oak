@@ -1,0 +1,67 @@
+.shipping-input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--btn-radius);
+    border: 1px solid var(--text-muted);
+    background-color: var(--bg-card);
+    font-family: var(--font-body);
+    margin: 0.75rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.75rem 0;
+}
+
+.shipping-input-m {
+    width: 25%;
+    padding: 0.75rem;
+    border-radius: var(--btn-radius);
+    border: 1px solid var(--text-muted);
+    background-color: var(--bg-card);
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.75rem 0;
+}
+
+
+.shipping-input:focus {
+    outline: none;
+    border-color: var(--accent);
+
+}
+
+ .shipping-button {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--btn-radius);
+    background-color: var(--accent);
+    color: var(--bg-card);
+    font-family: var(--font-body);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin: 0.75rem 0;
+    
+ }
+
+ .shipping-btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--btn-radius);
+    background-color: var(--bg-card);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    margin: 0.25rem 0.75rem;
+ }
+
+ .shipping-btn.active {
+    background-color: var(--accent);
+    color: var(--bg-card);
+ }

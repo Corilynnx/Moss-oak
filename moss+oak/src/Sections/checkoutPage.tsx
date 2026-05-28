@@ -5,6 +5,7 @@ import { OrderSummary } from './orderSummary';
 import { OrderTotal } from './orderTotal';
 import Footer from '../Components/Layout/Footer';
 import styles from '../styles/Checkout.module.css';
+import { PromoCode } from './promoCode';
 
 export function CheckoutPage() {
   return (
@@ -17,6 +18,7 @@ export function CheckoutPage() {
         <div className={styles['checkout-sidebar']}>
           <OrderSummary />
           <OrderTotal />
+          <PromoCode />
         </div>
       </div>
       <Footer />

@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { CheckoutContext } from '../Context/checkoutContext';
 import { type PaymentDetails } from '../Types/types';
+import styles from '../styles/paymentForm.module.css';
 
 export function PaymentForm() {
   const [method, setMethod] = useState<PaymentDetails['method']>('card');
@@ -29,7 +30,7 @@ export function PaymentForm() {
     <form onSubmit={handleSubmit}>
       <div>
         {(['card', 'paypal', 'shopPay'] as const).map(m => (
-          <button key={m} type="button" onClick={() => setMethod(m)}>
+          <button key={m} type="button" onClick={() => setMethod(m)} className={`${styles['shipping-btn']} ${method === m ? styles['active'] : ''}`}>
             {m}
           </button>
         ))}
@@ -37,9 +38,9 @@ export function PaymentForm() {
 
       {method === 'card' && (
         <>
-          <input name="cardNumber" defaultValue={payment.cardNumber} placeholder="Card number" required />
-          <input name="expiry"     defaultValue={payment.expiry}     placeholder="MM / YY"     required />
-          <input name="cvv"        defaultValue={payment.cvv}        placeholder="CVV"          required />
+          <input name="cardNumber" defaultValue={payment.cardNumber} placeholder="Card number" className={styles['shipping-input']} required />
+          <input name="expiry"     defaultValue={payment.expiry}     placeholder="MM / YY"     className={styles['shipping-input-m']} required />
+          <input name="cvv"        defaultValue={payment.cvv}        placeholder="CVV"          className={styles['shipping-input-m']} required />
         </>
       )}
 
@@ -51,8 +52,8 @@ export function PaymentForm() {
         <p>You'll be redirected to Shop Pay after reviewing your order.</p>
       )}
 
-      <button type="button" onClick={prevStep}>Back</button>
-      <button type="submit">Review order</button>
+      <button type="button" onClick={prevStep} className={styles['shipping-button']}>Back</button>
+      <button type="submit" className={styles['shipping-button']}>Review order</button>
     </form>
   );
 }

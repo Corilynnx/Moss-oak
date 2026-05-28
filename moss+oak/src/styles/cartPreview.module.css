@@ -49,6 +49,7 @@
 .cart-preview .cart-item-name {
   font-size: 0.9rem;
   margin: 0;
+  font-weight: 525;
 }
 
 .cart-preview .cart-item-price {
@@ -88,7 +89,7 @@
 .cart-summary-total {
   display: flex;
   justify-content: space-between;
-  font-weight: 600;
+  font-weight: 590;
 }
 
 /* === ACTION BUTTONS === */

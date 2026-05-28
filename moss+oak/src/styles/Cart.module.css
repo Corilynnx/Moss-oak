@@ -122,7 +122,7 @@
 
 .cart-item-name {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 525;
     color: #2c2416;
 }
 
@@ -185,7 +185,7 @@
 
 .cart-item-subtotal {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 525;
     color: #2c2416;
 }
 
@@ -229,12 +229,12 @@
     top: 2rem;
     margin-bottom: 5rem;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: -12rem;
 }
 
 .cart-summary-title {
     font-size: 1.15rem;
-    font-weight: 600;
+    font-weight: 590;
     color: #2c2416;
     margin-bottom: 1.5rem;
     letter-spacing: -0.01em;
@@ -264,7 +264,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 1.05rem;
-    font-weight: 700;
+    font-weight: 590;
     color: #2c2416;
     margin-bottom: 1.75rem;
 }

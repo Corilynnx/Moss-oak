@@ -1,5 +1,6 @@
 import { CheckoutContext } from '../Context/checkoutContext';
 import React, { useContext } from 'react';
+import styles from '../styles/shippingForm.module.css';
 
 export interface ShippingAddress {
   firstName: string;
@@ -40,16 +41,16 @@ export function ShippingForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input name="firstName" defaultValue={shippingAddress.firstName} placeholder="First name" required />
-      <input name="lastName"  defaultValue={shippingAddress.lastName}  placeholder="Last name"  required />
-      <input name="addressLine1"   defaultValue={shippingAddress.addressLine1}   placeholder="Address"    required />
-      <input name="addressLine2"   defaultValue={shippingAddress.addressLine2}   placeholder="Address 2 (optional)" />
-      <input name="city"      defaultValue={shippingAddress.city}      placeholder="City"       required />
-      <input name="state"     defaultValue={shippingAddress.state}     placeholder="State"      required />
-      <input name="postalCode"       defaultValue={shippingAddress.postalCode}       placeholder="ZIP"        required />
-      <input name="country"       defaultValue={shippingAddress.country}       placeholder="Country"        required />
-      <button type="button" onClick={prevStep}>Back</button>
-      <button type="submit">Continue to payment</button>
+      <input name="firstName" defaultValue={shippingAddress.firstName} placeholder="First name" className={styles['shipping-input']} required />
+      <input name="lastName"  defaultValue={shippingAddress.lastName}  placeholder="Last name"  className={styles['shipping-input']} required />
+      <input name="addressLine1"   defaultValue={shippingAddress.addressLine1}   placeholder="Address"    className={styles['shipping-input']} required />
+      <input name="addressLine2"   defaultValue={shippingAddress.addressLine2}   placeholder="Address 2 (optional)" className={styles['shipping-input']} />
+      <input name="city"      defaultValue={shippingAddress.city}      placeholder="City"       className={styles['shipping-input']} required />
+      <input name="state"     defaultValue={shippingAddress.state}     placeholder="State"      className={styles['shipping-input']} required />
+      <input name="postalCode"       defaultValue={shippingAddress.postalCode}       placeholder="ZIP"        className={styles['shipping-input']} required />
+      <input name="country"       defaultValue={shippingAddress.country}       placeholder="Country"        className={styles['shipping-input']} required />
+      <button type="submit" className={styles['shipping-button']}>Continue to payment</button>
+      <button type="button" onClick={prevStep} className={styles['shipping-button']}>Back</button>
     </form>
   );
 }

@@ -287,7 +287,7 @@ body {
   padding-top: 1.5rem;
   color: var(--text-on-accent);
   letter-spacing: var(--tracking-wide);
-  margin-left: 9rem;
+  margin-left: 7rem;
   margin-bottom: -20px;
 }
 
@@ -312,12 +312,11 @@ body {
 .sustainability-left {
   position: absolute;
   right: 0;
-  width: 950px;
+  width: 975px;
   min-height: 520px;
   padding: 1rem 2rem;
   background-color: var(--accent);
   border-radius: var(--radius-xl) 0 0 var(--radius-xl);
-  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
@@ -331,15 +330,15 @@ body {
   font-size: var(--text-lg);
   font-family: var(--font-body);
   color: var(--text-on-accent);
-  line-height: 1.2;
+  line-height: 1.7;
   width: 80%;
-  margin-left: 9rem;
+  margin-left: 7rem;
 }
 
 /* Image breaks out of the left edge of the accent block */
 .sustainability-image-wrap {
   position: absolute;
-  left: 23%;
+  left: 25%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
@@ -352,6 +351,7 @@ body {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
   filter: var(--filter-warm);
+
 
 }
 
@@ -518,17 +518,16 @@ body {
         align-items: center;
     }
 
-    .sustainability-image-wrap {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
-        z-index: 2;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: -3rem;
-    }
+   .sustainability-image-wrap {
+    position: relative;     /* also back in flow */
+    left: unset;
+    top: unset;
+    transform: none;
+    width: 80%;
+    max-width: 340px;
+    margin: 0 auto -6rem; /* pulls the image down so it overlaps the card top nicely */
+    z-index: 3;
+  }
 
     .sustainability-image {
         width: 85%;
